@@ -1,0 +1,53 @@
+footer {
+  @include styleText ($color-gray-0, $fs-13, $fw-nm);
+  .footer__top {
+    width: 90%;
+    margin:  $mg-40 auto;
+    .nav {
+      height: 110px;
+      .nav-item {
+        flex-basis: 25%;
+        .nav-link {
+          color: $color-blue-0;
+          padding: 0;
+          &.bold {
+            font-weight: $fw-700;
+          }
+        }
+      }
+    }
+    .btn-group {
+      display: block;
+      .button--dropup {
+        min-width: 160px;
+        box-shadow: none;
+        i {
+          padding: 0 $pd-10;
+        }
+        &::after {
+          margin-left: 25%;
+        }
+      }
+      .dropdown-menu {
+        font-size: $fs-13;
+      }
+    }
+  }
+  .footer__bottom {
+    width: 90%;
+    margin: $mg-32 - 2 auto;
+    .logo-black {
+      display: inline-block;
+    }
+    .logo-white {
+      display: none;
+    }
+    img {
+      width: 110px;
+      margin-right: $mg-15 - 5;
+    }
+    .nav-link {
+      color: $color-blue-0;
+    }
+  }
+}

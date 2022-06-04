@@ -1,0 +1,65 @@
+.card {
+  height: 275px;
+  .card-body {
+    padding: 1rem;
+    .card-title {
+      @include styleText ($color-black-0, $fs-15, $fw-700);
+    }
+    .card-text {
+      margin: $mg-5 0;
+      @include styleText ($color-gray-0, $fs-13 - 1, $fw-nm);
+    }
+    .card__rate {
+      i {
+        @include styleText ($color-yellow-0, $fs-13 - 1, $fw-900);
+      }
+      span {
+        &:nth-child(2) {
+          @include styleText ($color-gray-0, $fs-13, $fw-600);
+        }
+        &:nth-child(3) {
+          @include styleText ($color-gray-0, $fs-13, $fw-nm);
+        }
+      }
+    }
+    .card__price {
+      text-align: right;
+      padding: $pd-10 - 3 0;
+      span {
+        &:first-child {
+          @include styleText ($color-gray-0, $fs-13, $fw-nm);
+          text-decoration: line-through;
+        }
+        &:last-child {
+          @include styleText ($color-black-0, $fs-13, $fw-700);
+        }
+      }
+    }
+  }
+}
+
+.card--feedback {
+  height: 280px;
+  .card-body {
+    padding: 2rem;
+    .card__top {
+      display: flex;
+      margin-bottom: $mg-15;
+      .card__avatar {
+        img {
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+          margin-right: $mg-15;
+        }
+      }
+      .card__name {
+        margin-bottom: 0;
+      }
+      
+    }
+    .card-text {
+      @include styleText ($color-black-0, $fs-15, $fw-nm)
+    }
+  }
+}
